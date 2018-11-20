@@ -2,7 +2,7 @@
 # -*-: coding utf-8 -*-
 
 import ConfigParser
-from robot.robot import Robot
+from robot import Robot
 from hermes_python.hermes import Hermes
 import io
 import Queue
@@ -28,22 +28,19 @@ def read_configuration_file(configuration_file):
         return dict()
 
 class Skill:
-
     def __init__(self):
-        config = read_configuration_file("config.ini")
-        extra = config["global"].get("extra", False)
-        self.coffee = CoffeeHack(extra = extra)
+        #config = read_configuration_file("config.ini")
+        #extra = config["global"].get("extra", False)
+        self.robo = Robot()
 
 
 def callback(hermes, intent_message):
-
+    print "snips callback pour"
     hermes.skill.robo.pour()
-
-
 
 if __name__ == "__main__":
     skill = Skill()
     with Hermes(MQTT_ADDR) as h:
         h.skill = skill
-        h.subscribe_intent("pour", callback) \
-.loop_forever()
+        h.subscribe_intent("Vishal123:pour", callback) \
+         .start()

@@ -1,4 +1,4 @@
-﻿package_name: robot
+package_name: robot
 class_name: Robot
 description: Hacked robot machine Skill
 intents:

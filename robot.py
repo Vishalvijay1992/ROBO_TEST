@@ -11,8 +11,6 @@ import warnings
 
 
 class Robot:
-
-
     @classmethod
     def __init__(self):
         arduino_ports = [
@@ -29,15 +27,14 @@ class Robot:
                             baudrate = 9600
                         )
 
-
     @classmethod
     def pour(self):
-		while 1:
-			self.ser.write('B%dE\n'%(2))
-			time.sleep(12)
+        #while 1:
+        print "robot pour"
+        self.ser.write('B%dE\n'%(2))
+        time.sleep(12)
 
 if (__name__ == "__main__"):
     c = Robot()
-c.pour()
-
+    c.pour()
 
