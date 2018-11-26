@@ -46,5 +46,5 @@ if __name__ == "__main__":
     with Hermes(MQTT_ADDR) as h:
         h.skill = skill
         h.subscribe_intent("Vishal123:left", callback) \
-        .subscribe_intent("Vishal123:right".robo_right)\
+        .subscribe_intent("Vishal123:right",robo_right)\
          .start()
