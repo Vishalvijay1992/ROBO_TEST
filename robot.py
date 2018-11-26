@@ -32,12 +32,12 @@ class Robot:
         #while 1:
         print "robot left"
         self.ser.write('B%dE\n'%(2))
-        time.sleep(12)
+        time.sleep(5)
 
     def right(self):
         print "robot right"
         self.ser.write('B%dE\n'%(1))
-        time.sleep(12)
+        time.sleep(5)
 
 if (__name__ == "__main__"):
     c = Robot()

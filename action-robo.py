@@ -47,4 +47,4 @@ if __name__ == "__main__":
         h.skill = skill
         h.subscribe_intent("Vishal123:left", callback) \
         .subscribe_intent("Vishal123:right",robo_right)\
-         .start()
+         .loop_forever()
