@@ -36,7 +36,7 @@ class Skill:
 
 def callback(hermes, intent_message):
     print "snips callback left"
-    hermes.skill.robo.pour()
+    hermes.skill.robo.left()
 def robo_right(hermes, intent_message):
     print "snips right"
     hermes.skill.robo.right()
