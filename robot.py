@@ -37,10 +37,21 @@ class Robot:
     def right(self):
        print "robot right"
        self.ser.write('B%dE\n'%(1))
+
+    def up(self):
+        print "robot face up"
+        self.ser.write('B%dE\n'%(3))
+
+    def down(self):
+        print "robot face down"
+        self.ser.write('B%dE\n'%(4))
+
     
 
 if (__name__ == "__main__"):
     c = Robot()
     c.left()
     c.right()
+    c.up()
+    c.down()
 

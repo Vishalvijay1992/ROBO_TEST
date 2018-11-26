@@ -42,10 +42,20 @@ def robo_right(hermes, intent_message):
     print "snips right"
     hermes.skill.robo.right()
 
+def robo_up(hermes, intent_message):
+    print "snips face up"
+    hermes.skill.robo.up()
+
+def robo_down(hermes, intent_message):
+    print "snips face down"
+    hermes.skill.robo.down()
+
 if __name__ == "__main__":
     skill = Skill()
     with Hermes(MQTT_ADDR) as h:
         h.skill = skill
         h.subscribe_intent("Vishal123:left", callback) \
             .subscribe_intent("Vishal123:right",robo_right)\
+            .subscribe_intent("Vishal123:face up",robo_up)\
+            .subscribe_intent("Vishal123:face down",robo_down)\
          .start()
