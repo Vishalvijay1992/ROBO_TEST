@@ -40,11 +40,11 @@ class Robot:
 
     def up(self):
         print "robot face up"
-        self.ser.write('B%dE\n'%(3))
-
-    def down(self):
-        print "robot face down"
         self.ser.write('B%dE\n'%(4))
+
+#    def down(self):
+ #       print "robot face down"
+  #      self.ser.write('B%dE\n'%(4))
 
     
 
@@ -53,5 +53,5 @@ if (__name__ == "__main__"):
     c.left()
     c.right()
     c.up()
-    c.down()
+   # c.down()
 

@@ -46,9 +46,9 @@ def robo_up(hermes, intent_message):
     print "snips face up"
     hermes.skill.robo.up()
 
-def robo_down(hermes, intent_message):
-    print "snips face down"
-    hermes.skill.robo.down()
+#def robo_down(hermes, intent_message):
+ #   print "snips face down"
+  #  hermes.skill.robo.down()
 
 if __name__ == "__main__":
     skill = Skill()
@@ -57,5 +57,4 @@ if __name__ == "__main__":
         h.subscribe_intent("Vishal123:left", callback) \
             .subscribe_intent("Vishal123:right",robo_right)\
             .subscribe_intent("Vishal123:face up",robo_up)\
-            .subscribe_intent("Vishal123:face down",robo_down)\
          .start()
