@@ -28,13 +28,19 @@ class Robot:
                         )
 
     @classmethod
-    def pour(self):
+    def left(self):
         #while 1:
-        print "robot pour"
+        print "robot left"
         self.ser.write('B%dE\n'%(2))
+        time.sleep(12)
+
+    def right(self):
+        print "robot right"
+        self.ser.write('B%dE\n'%(1))
         time.sleep(12)
 
 if (__name__ == "__main__"):
     c = Robot()
-    c.pour()
+    c.left()
+    c.right()
 

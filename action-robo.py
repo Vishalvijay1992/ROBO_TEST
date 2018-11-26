@@ -35,12 +35,16 @@ class Skill:
 
 
 def callback(hermes, intent_message):
-    print "snips callback pour"
+    print "snips callback left"
     hermes.skill.robo.pour()
+def robo_right(hermes, intent_message):
+    print "snips right"
+    hermes.skill.robo.right()
 
 if __name__ == "__main__":
     skill = Skill()
     with Hermes(MQTT_ADDR) as h:
         h.skill = skill
-        h.subscribe_intent("Vishal123:pour", callback) \
+        h.subscribe_intent("Vishal123:left", callback) \
+        .subscribe_intent("Vishal123:right".robo_right)\
          .start()
