@@ -41,4 +41,6 @@ class Robot:
 
 if (__name__ == "__main__"):
     c = Robot()
+    c.left()
+    c.right()
 
