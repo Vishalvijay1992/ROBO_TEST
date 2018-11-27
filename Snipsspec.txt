@@ -4,7 +4,6 @@ description: Hacked robot machine Skill
 intents:
   - intent: pour
     action: |
-      {%
-		
+      {%		
       snips.skill.pour()
       %}
