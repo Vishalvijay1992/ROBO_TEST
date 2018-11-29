@@ -54,8 +54,8 @@ def robo_fine(hermes, intent_message):
     print "Snips how are u"
     from datetime import datetime
     result_sentence="I am fine thank you and how are you "
-    current_session_id=intentMessage.session_id
-    hermes.publish_end_session(current_session_id,result_sentence)
+   # current_session_id=intentMessage.session_id
+    hermes.publish_end_session(result_sentence)
    # hermes.skill.robo.fine()
 
 
