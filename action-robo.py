@@ -50,6 +50,13 @@ def robo_down(hermes, intent_message):
     print "snips face down"
     hermes.skill.robo.down()
 
+def robo_fine(hermes, intent_message):
+    print "Snips how are u"
+    result_sentence="I am fine thank you and how are you "
+    hermes.publish_end_session(current_session_id,result_sentence)
+   # hermes.skill.robo.fine()
+
+
 if __name__ == "__main__":
     skill = Skill()
     with Hermes(MQTT_ADDR) as h:
@@ -58,4 +65,5 @@ if __name__ == "__main__":
             .subscribe_intent("Vishal123:right",robo_right)\
             .subscribe_intent("Vishal123:up",robo_up)\
             .subscribe_intent("Vishal123:down",robo_down)\
+            .subscribe_intent("Vishal123:fine",robo_fine)\
          .start()

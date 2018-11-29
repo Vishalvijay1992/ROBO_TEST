@@ -1,6 +1,7 @@
 # coding: utf8
 import os
 from os.path import expanduser
+from hermes_python.hermes import Hermes
 import subprocess
 import serial
 import serial.tools.list_ports
@@ -46,6 +47,12 @@ class Robot:
         print "robot face down"
         self.ser.write('B%dE\n'%(3))
 
+   # def fine(self):
+    #    print "robot I am fine"
+       # result_sentence="I am fine thank you and how are you"
+       # current_session_id=intentMessage.session_id
+       # hermes.publish_end_session(result_sentence)
+
     
 
 if (__name__ == "__main__"):
@@ -54,4 +61,5 @@ if (__name__ == "__main__"):
     c.right()
     c.up()
     c.down()
+   # c.fine()
 
